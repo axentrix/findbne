@@ -83,6 +83,9 @@
                         <div class="navbar-nav ml-auto">
 
                             <ul id="menu-main-menu" class="navbar-nav">
+
+                                <li class="hidden-on-desktop"><a href="#" class="btn btn-info mr-4 mb-4">Login</a></li>
+                                <li class="hidden-on-desktop"><a href="#" class="btn btn-primary">List Your Skills</a></li>
                                 <li class="menu-item nav-item">
                                     <a title="Stories &amp; Advice" href="/event-advice-dubai" class="nav-link">STORIES
                                         &amp; ADVICE</a>
@@ -106,30 +109,30 @@
 
                         </div>
 
-                        <div id="menu" class="header-right text-end">
-                            <div class="header-social "><a id="favorites-container" href="/favorites"
-                                    class="header-heart"><span><i class="far fa-heart"></i></span>
-                                    <div class="position-relative">
-                                        <ul id="favorites">
-                                            <!---->
-                                            <li id="favorites-notice">
-                                                Your list is empty. <br>
-                                                Save musicians, entertainers, &amp; speakers, and they'll appear here.
-                                            </li>
-                                        </ul>
-                                        <div class="favorites-count">
-                                            0
-                                        </div>
-                                    </div>
-                                </a></div>
-                            <div class="header-btn"><a title="Login" href="/login" class="nav-link">Login</a> <a
-                                    title="List Your Skills" href="/list-your-skills" class="nav-link">List Your
-                                    Skills</a></div>
-                        </div>
+                        
 
 
                     </div>
-
+                    <div id="menu" class="header-right text-end ml-auto">
+                        <div class="header-social "><a id="favorites-container" href="/favorites"
+                                class="header-heart"><span><i class="far fa-heart"></i></span>
+                                <div class="position-relative">
+                                    <ul id="favorites">
+                                        <!---->
+                                        <li id="favorites-notice">
+                                            Your list is empty. <br>
+                                            Save musicians, entertainers, &amp; speakers, and they'll appear here.
+                                        </li>
+                                    </ul>
+                                    <div class="favorites-count">
+                                        0
+                                    </div>
+                                </div>
+                            </a></div>
+                        <div class="header-btn hidden-on-mobile"><a title="Login" href="/login" class="nav-link">Login</a> <a
+                                title="List Your Skills" href="/list-your-skills" class="nav-link hidden-on-mobile">List Your
+                                Skills</a></div>
+                    </div>
                     <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" id="maintoggler"
                         data-target="#navBar" aria-controls="navBar" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -1168,135 +1171,7 @@
             $("#shape10").css("animation-delay", "1.1s");
             $("#shape11").css("animation-delay", "1.2s");
 
-            var waypoint1 = new Waypoint({
-                element: document.getElementById('front-box'),
-                handler: function (direction) {
-
-                    if (direction == "up") {
-
-                        $("#shape12").removeClass("animatemedown1");
-                        $("#shape12").addClass("animatemeup1");
-
-                        $("#shape11").removeClass("animatemedown2");
-                        $("#shape11").addClass("animatemeup2");
-
-                        $("#shape10").removeClass("animatemedown1");
-                        $("#shape10").addClass("animatemeup1");
-
-                        $("#shape9").removeClass("animatemedown1");
-                        $("#shape9").addClass("animatemeup1");
-
-
-
-
-                        $("#shape8").removeClass("animatemedown1");
-                        $("#shape8").addClass("animatemeup1");
-
-                        $("#shape7").removeClass("animatemedown4");
-                        $("#shape7").addClass("animatemeup4");
-
-                        $("#shape5").removeClass("animatemedown3");
-                        $("#shape5").addClass("animatemeup3");
-
-                        $("#shape4").removeClass("animatemedown4");
-                        $("#shape4").addClass("animatemeup4");
-
-                        $("#shape3").removeClass("animatemedown1");
-                        $("#shape3").addClass("animatemeup1");
-
-                        $("#shape2").removeClass("animatemedown2");
-                        $("#shape2").addClass("animatemeup2");
-
-                        $("#shape1").removeClass("animatemedown3");
-                        $("#shape1").addClass("animatemeup3");
-
-
-
-                        $("#shape6").removeClass("animatemedown1");
-                        $("#shape6").addClass("animatemeup1");
-
-                        $("#shape11").css("animation-delay", "0.2s");
-                        $("#shape10").css("animation-delay", "0.3s");
-                        $("#shape9").css("animation-delay", "0.4s");
-                        $("#shape8").css("animation-delay", "0.5s");
-                        $("#shape7").css("animation-delay", "0.6s");
-
-                        $("#shape6").css("animation-delay", "0.7s");
-                        $("#shape5").css("animation-delay", "0.8s");
-                        $("#shape4").css("animation-delay", "0.9s");
-                        $("#shape3").css("animation-delay", "1s");
-                        $("#shape2").css("animation-delay", "1.1s");
-                        $("#shape1").css("animation-delay", "1.2s");
-
-
-                    } else if (direction == "down") {
-
-                        $("#shape12").removeClass("animatemeup1");
-                        $("#shape12").addClass("animatemedown1");
-
-
-
-
-                        $("#shape11").removeClass("animatemeup2");
-                        $("#shape11").addClass("animatemedown2");
-
-                        $("#shape10").removeClass("animatemeup1");
-                        $("#shape10").addClass("animatemedown1");
-                        $("#shape6").removeClass("animatemeup1");
-                        $("#shape6").addClass("animatemedown1");
-
-
-
-
-
-
-                        $("#shape9").removeClass("animatemeup1");
-                        $("#shape9").addClass("animatemedown1");
-
-
-
-
-                        $("#shape8").removeClass("animatemeup1");
-                        $("#shape8").addClass("animatemedown1");
-
-                        $("#shape7").removeClass("animatemeup4");
-                        $("#shape7").addClass("animatemedown4");
-
-                        $("#shape5").removeClass("animatemeup3");
-                        $("#shape5").addClass("animatemedown3");
-
-                        $("#shape4").removeClass("animatemeup4");
-                        $("#shape4").addClass("animatemedown4");
-
-                        $("#shape3").removeClass("animatemeup1");
-                        $("#shape3").addClass("animatemedown1");
-
-                        $("#shape2").removeClass("animatemeup2");
-                        $("#shape2").addClass("animatemedown2");
-
-                        $("#shape1").removeClass("animatemeup3");
-                        $("#shape1").addClass("animatemedown3");
-
-
-                        $("#shape1").css("animation-delay", "0.2s");
-                        $("#shape2").css("animation-delay", "0.3s");
-                        $("#shape3").css("animation-delay", "0.4s");
-                        $("#shape4").css("animation-delay", "0.5s");
-                        $("#shape5").css("animation-delay", "0.6s");
-
-                        $("#shape6").css("animation-delay", "0.7s");
-                        $("#shape7").css("animation-delay", "0.8s");
-                        $("#shape8").css("animation-delay", "0.9s");
-                        $("#shape9").css("animation-delay", "1s");
-                        $("#shape10").css("animation-delay", "1.1s");
-                        $("#shape11").css("animation-delay", "1.2s");
-
-
-                    }
-
-                },
-                offset: '0%'
-            });
+           
 
 
 
@@ -1334,91 +1209,78 @@
 
 
 
-
-
-
-
-
-        });
-
-        //      
-
-
-
-
-
-
-
-
-
-
-        window.addEventListener("load", function () {
             gsap.registerPlugin(ScrollTrigger);
            
 
 
-            const pageContainer = document.querySelector("main");
-            pageContainer.setAttribute("data-scroll-container", "");
+           const pageContainer = document.querySelector("main");
+           pageContainer.setAttribute("data-scroll-container", "");
 
-            const scroller = new LocomotiveScroll({
-                el: pageContainer,
-                smooth: true,
-                getDirection: true
-            });
+           const scroller = new LocomotiveScroll({
+               el: pageContainer,
+               smooth: true,
+               smartphone: {
+        smooth: true
+    },
+    tablet: {
+        smooth: true
+    },
+               getDirection: true
+           });
 
-            scroller.on("scroll", function (t) {
-                document.documentElement.setAttribute("data-direction", t.direction);
-            });
+           scroller.on("scroll", function (t) {
+               document.documentElement.setAttribute("data-direction", t.direction);
+           });
 
-            scroller.on("scroll", ScrollTrigger.update);
+           scroller.on("scroll", ScrollTrigger.update);
 
-            ScrollTrigger.scrollerProxy(pageContainer, {
-                scrollTop(value) {
-                    return arguments.length
-                        ? scroller.scrollTo(value, 0, 0)
-                        : scroller.scroll.instance.scroll.y;
-                },
-                getBoundingClientRect() {
-                    return {
-                        left: 0,
-                        top: 0,
-                        width: window.innerWidth,
-                        height: window.innerHeight
-                    };
-                },
-                pinType: pageContainer.style.transform ? "transform" : "fixed"
-            });
+           ScrollTrigger.scrollerProxy(pageContainer, {
+               scrollTop(value) {
+                   return arguments.length
+                       ? scroller.scrollTo(value, 0, 0)
+                       : scroller.scroll.instance.scroll.y;
+               },
+               getBoundingClientRect() {
+                   return {
+                       left: 0,
+                       top: 0,
+                       width: window.innerWidth,
+                       height: window.innerHeight
+                   };
+               },
+               pinType: pageContainer.style.transform ? "transform" : "fixed"
+           });
 
-            // Pinning and horizontal scrolling
+           // Pinning and horizontal scrolling
 
-            let horizontalSections = document.querySelectorAll(".horizontal-scroll");
+           let horizontalSections = document.querySelectorAll(".horizontal-scroll");
 
-            horizontalSections.forEach((horizontalSection) => {
-                let pinWrap = horizontalSection.querySelector(".pin-wrap");
-                let pinWrapWidth = pinWrap.offsetWidth;
-                let horizontalScrollLength = pinWrapWidth - window.innerWidth;
-                gsap.to(pinWrap, {
-                    scrollTrigger: {
-                        scroller: "[data-scroll-container]",
-                        scrub: true,
-                        trigger: horizontalSection,
-                        pin: true,
-                        start: "top top",
-                        end: () => `+=${pinWrapWidth}`,
-                        invalidateOnRefresh: true
-                    },
-                    x: -horizontalScrollLength,
-                    ease: "none"
-                });
-            });
-
-
-          
-
-            /* COLOR CHANGER */
+           horizontalSections.forEach((horizontalSection) => {
+               let pinWrap = horizontalSection.querySelector(".pin-wrap");
+               let pinWrapWidth = pinWrap.offsetWidth;
+               let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+               gsap.to(pinWrap, {
+                   scrollTrigger: {
+                       scroller: "[data-scroll-container]",
+                       scrub: true,
+                       trigger: horizontalSection,
+                       pin: true,
+                       start: "top top",
+                       end: () => `+=${pinWrapWidth}`,
+                       invalidateOnRefresh: true
+                   },
+                   x: -horizontalScrollLength,
+                   ease: "none"
+               });
+           });
 
 
-            var scrollUp = document.querySelector('.header-section');
+         
+
+           /* COLOR CHANGER */
+
+
+           var scrollUp = document.querySelector('.header-section');
 
 
 var boy1=document.querySelector('#boy1');
@@ -1426,61 +1288,68 @@ var boy2=document.querySelector('#boy2');
 var boy3=document.querySelector('#boy3');
 var boy4=document.querySelector('#boy4');
 var girl1=document.querySelector('#girl1');
-
+$(boy1).addClass('animatebody');
+$(boy2).addClass('animatebody');
+$(boy3).addClass('animatebody');
+$(boy4).addClass('animatebody');
+     $(girl1).addClass('animatebody');
 ScrollTrigger.create({
-    scroller: "[data-scroll-container]",
-  start: 0,
-  end: 99999,
-  onUpdate: ({direction}) => {
-      console.log("hahah");
-    if (direction == -1) {
-      scrollUp.classList.remove('aos-animate');
+   scroller: "[data-scroll-container]",
+ start: 0,
+ end: 99999,
+ onUpdate: ({direction}) => {
+     
+   if (direction == -1) {
+     scrollUp.classList.remove('aos-animate');
 
 
 
-    } else {
-      scrollUp.classList.add('aos-animate');
-      boy1.classList.add('animatebody');
-      boy2.classList.add('animatebody');
-      boy3.classList.add('animatebody');
-      boy4.classList.add('animatebody');
-      girl1.classList.add('animatebody');
-    }
-  }
+   } else {
+     scrollUp.classList.add('aos-animate');
+    
+   }
+ }
 });
 
-            const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
+           const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
 
-         
+        
 
-            scrollColorElems.forEach((colorSection, i) => {
-                const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;
-                const prevText = i === 0 ? "" : scrollColorElems[i - 1].dataset.textcolor;
+           scrollColorElems.forEach((colorSection, i) => {
+               const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;
+               const prevText = i === 0 ? "" : scrollColorElems[i - 1].dataset.textcolor;
 
-                ScrollTrigger.create({
-                    trigger: colorSection,
-                    scroller: "[data-scroll-container]",
-                    start: "top 0%",
-                    onEnter: () =>
-                        gsap.to("body", {
-                            backgroundColor: colorSection.dataset.bgcolor,
-                            color: colorSection.dataset.textcolor,
-                            overwrite: "auto"
-                        }),
-                    onLeaveBack: () =>
-                        gsap.to("body", {
-                            backgroundColor: prevBg,
-                            color: prevText,
-                            overwrite: "auto"
-                        })
-                });
-            });
+               ScrollTrigger.create({
+                   trigger: colorSection,
+                   scroller: "[data-scroll-container]",
+                   start: "top 0%",
+                   onEnter: () =>
+                       gsap.to("body", {
+                           backgroundColor: colorSection.dataset.bgcolor,
+                           color: colorSection.dataset.textcolor,
+                           overwrite: "auto"
+                       }),
+                   onLeaveBack: () =>
+                       gsap.to("body", {
+                           backgroundColor: prevBg,
+                           color: prevText,
+                           overwrite: "auto"
+                       })
+               });
+           });
 
 
-            ScrollTrigger.addEventListener("refresh", () => scroller.update());
+           ScrollTrigger.addEventListener("refresh", () => scroller.update());
 
-            ScrollTrigger.refresh();
+           ScrollTrigger.refresh();
+
+       
+
+
         });
+
+        //      
+
         var index = 0;
         var slides = document.querySelectorAll(".slides");
 

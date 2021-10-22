@@ -570,7 +570,7 @@ header .header-section .navbar .navbar-brand {
   height: 60px;
   width: 200px;
   display: flex;
-  background: url(../images/logo.svg) 0 0 no-repeat;
+  background: url(../images/logo.svg) 0 50% no-repeat;
 }
 header .header-section .navbar .navbar-brand img {
   max-width: 180px;
@@ -606,7 +606,7 @@ header .header-section.aos-animate .navbar .navbar-brand {
   max-width: 200px;
   height: 60px;
   width: 200px;
-  background: url(../images/logodark.svg) 0 0 no-repeat;
+  background: url(../images/logodark.svg) 0 50% no-repeat;
 }
 header .header-section.aos-animate .navbar a {
   color: #0f244e;
@@ -619,9 +619,9 @@ header .navbar-toggler {
   z-index: 7777;
   display: inline-flex;
   align-self: stretch;
-  background: #06284e;
-  width: 90px;
-  height: 90px;
+  background: #0c2963;
+  width: 80px;
+  height: 80px;
   border-radius: 0px;
   align-items: center;
   justify-content: center;
@@ -1170,6 +1170,7 @@ section h2 {
 .top-section .vendorcontainer {
   position: relative;
   z-index: 4;
+  padding-top: 90px;
 }
 .top-section .vendorcontainer-outer {
   background: url('../images/circle.png') 50% 50% no-repeat;
@@ -1236,7 +1237,7 @@ section h2 {
     transform: scale(10%, 10%);
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 1204px) {
   .circle-1 {
     left: 619px;
     top: -142px;
@@ -1306,7 +1307,7 @@ section h2 {
     transform: rotate(0deg);
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 1204px) {
   .circle-3 {
     right: 15.5vw;
     top: -4.3vw;
@@ -1354,7 +1355,7 @@ section h2 {
     transform: rotate(-1turn);
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 1204px) {
   .circle-4 {
     right: 3.8vw;
     top: -9.4vw;
@@ -1402,7 +1403,7 @@ section h2 {
     transform: rotate(-1turn);
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 1204px) {
   .circle-5 {
     top: 23vw;
     left: 5.8vw;
@@ -1585,9 +1586,6 @@ main {
   .statistic {
     font-size: 48px;
   }
-  h2 {
-    font-size: 48px;
-  }
   .top-section {
     display: block;
   }
@@ -1653,101 +1651,27 @@ main {
     margin-left: 10%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1205px) {
+  .hidden-on-desktop {
+    display: none !important;
+  }
+  .hidden-on-mobile {
+    display: inline-flex !important;
+  }
+  section {
+    height: 100vh !important;
+    min-height: unset !important;
+  }
+  .navbar-expand-lg .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
   .navbar-expand-lg .navbar-collapse,
   .navbar-expand-lg .navbar-nav {
     align-self: stretch;
   }
-}
-@media (max-width: 991px) {
-  .three-columns-section {
-    background: #ececff;
-  }
-  .three-columns-section .container {
-    position: relative;
-    z-index: 500;
-    color: #ffffff;
-  }
-  .three-columns-section .container p {
-    color: #ffffff;
-  }
-  .three-columns-section h3 {
-    margin-bottom: 0px !important;
-  }
-  .totop {
+  .navbar-expand-lg .navbar-toggler {
     display: none;
-  }
-  .navbar-collapse {
-    background: #0f244e;
-    position: fixed;
-    z-index: 7775;
-    display: block;
-    visibility: hidden;
-    opacity: 0;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: all 0.4s;
-  }
-  .navbar-collapse ul.navbar-nav {
-    position: absolute;
-    top: 100px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 80vh;
-  }
-  .navbar-collapse ul.navbar-nav li {
-    opacity: 0;
-    transition: opacity 0.4s cubic-bezier(0.58, 0.3, 0.005, 1);
-    padding: 0;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  .navbar-collapse ul.navbar-nav li a {
-    color: white !important;
-    font-size: 24px;
-    padding: 0;
-    flex: 1 0 auto;
-    text-align: center;
-  }
-  .navbar-collapse ul.navbar-nav li a:hover {
-    color: #00a6e1;
-  }
-  .navbar-collapse.show {
-    min-height: 100vh;
-    visibility: visible;
-    opacity: 1;
-    z-index: 7776;
-  }
-  .navbar-collapse.show ul li {
-    opacity: 1;
-  }
-  .navbar-collapse.show ul li a {
-    padding: 3vw 5vw;
-    font-size: 8.5vmin;
-  }
-  .navbar-collapse.show ul li:nth-child(1) {
-    transition-delay: 0.2s;
-  }
-  .navbar-collapse.show ul li:nth-child(2) {
-    transition-delay: 0.3s;
-  }
-  .navbar-collapse.show ul li:nth-child(3) {
-    transition-delay: 0.4s;
-  }
-  .navbar-collapse.show ul li:nth-child(4) {
-    transition-delay: 0.5s;
-  }
-  .navbar-collapse.show ul li:nth-child(5) {
-    transition-delay: 0.6s;
-  }
-  .navbar-collapse.show ul li:nth-child(6) {
-    transition-delay: 0.7s;
   }
 }
 .order-md-1 {
@@ -2701,10 +2625,6 @@ svg {
   display: flex;
   left: 0;
 }
-section {
-  height: 100vh !important;
-  min-height: unset !important;
-}
 .pin-wrap {
   height: 100vh;
   display: flex;
@@ -2723,4 +2643,167 @@ section {
 .jwpnavbar--scrolled {
   height: 50px;
   background: red;
+}
+@media (max-width: 1204px) {
+  .hidden-on-desktop {
+    display: flex !important;
+  }
+  .hidden-on-mobile {
+    display: none !important;
+  }
+  .header-right .header-social .header-heart {
+    font-size: 5.4vw !important;
+    color: #ff6f00 !important;
+  }
+  .box-content .btn,
+  .theme-btn4 {
+    display: flex !important;
+    font-size: 3.4vw !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  .benefits-one {
+    padding-bottom: 50px;
+  }
+  .homepage-features .homepage-features-box {
+    position: absolute;
+    top: 16px;
+    left: 20px !important;
+    top: 20px !important;
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .homepage-features .homepage-features-box .title-md-white-blackbold {
+    margin-bottom: 0 !important;
+  }
+  .homepage-features .homepage-features-box p {
+    display: flex;
+    flex: 1 100%;
+  }
+  header .header-section {
+    background: #ffffff;
+  }
+  header .header-section .container {
+    padding: 0;
+    width: 100%;
+    max-width: unset;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .header-section header .header-section.aos-animate .navbar {
+    justify-content: space-between !important;
+  }
+  header .header-section .navbar {
+    width: 100%;
+    position: relative;
+    margin-top: 0;
+  }
+  header .header-section .navbar .navbar-brand {
+    background: url(../images/logodark.svg) 0 50% no-repeat;
+  }
+  body {
+    overflow: unset !important;
+  }
+  section {
+    height: unset !important;
+    min-height: 90vh !important;
+  }
+  .navbar-expand-lg .navbar-nav {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .navbar-expand-lg .navbar-toggler {
+    display: flex !important;
+    position: relative;
+    right: 0;
+  }
+  .three-columns-section .container {
+    position: relative;
+    z-index: 500;
+    color: #ffffff;
+  }
+  .three-columns-section .container p {
+    color: #ffffff;
+  }
+  .three-columns-section h3 {
+    margin-bottom: 0px !important;
+  }
+  .totop {
+    display: none;
+  }
+  .navbar-collapse {
+    background: #0f244e;
+    position: fixed;
+    z-index: 7775;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+  }
+  .navbar-collapse ul.navbar-nav {
+    position: absolute;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+  }
+  .navbar-collapse ul.navbar-nav li {
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.58, 0.3, 0.005, 1);
+    padding: 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar-collapse ul.navbar-nav li a {
+    color: white !important;
+    font-size: 24px;
+    padding: 0;
+    flex: 1 0 auto;
+    text-align: center;
+  }
+  .navbar-collapse ul.navbar-nav li a:hover {
+    color: #00a6e1;
+  }
+  .navbar-collapse.show {
+    min-height: 100vh;
+    visibility: visible;
+    opacity: 1;
+    z-index: 7776;
+  }
+  .navbar-collapse.show ul li {
+    opacity: 1;
+  }
+  .navbar-collapse.show ul li a {
+    padding: 3vw 5vw;
+    font-size: 8.5vmin;
+  }
+  .navbar-collapse.show ul li:nth-child(1) {
+    transition-delay: 0.2s;
+  }
+  .navbar-collapse.show ul li:nth-child(2) {
+    transition-delay: 0.3s;
+  }
+  .navbar-collapse.show ul li:nth-child(3) {
+    transition-delay: 0.4s;
+  }
+  .navbar-collapse.show ul li:nth-child(4) {
+    transition-delay: 0.5s;
+  }
+  .navbar-collapse.show ul li:nth-child(5) {
+    transition-delay: 0.6s;
+  }
+  .navbar-collapse.show ul li:nth-child(6) {
+    transition-delay: 0.7s;
+  }
 }
