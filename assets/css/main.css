@@ -8288,7 +8288,7 @@ header .header-logo .custom-logo {
   color: #cc5900;
 }
 .header-right .header-social .header-heart {
-  margin-right: 60px;
+  margin-right: 30px;
   font-size: 19px;
   color: white;
   font-weight: 500;
@@ -13651,7 +13651,7 @@ footer img {
 }
 
 .header-right .header-social .header-heart {
-  padding-right: 50px;
+  padding-right: 30px;
   margin-right: 0;
 }
 
