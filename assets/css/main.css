@@ -8692,7 +8692,7 @@ footer img {
 }
 @media only screen and (max-width: 992px) {
   .homepage-slider .text-description-area {
-    position: unset;
+    position: relative;
     width: 100%;
   }
 }
