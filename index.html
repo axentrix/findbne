@@ -283,7 +283,7 @@
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-md-6">
-                        <div class="box-content front-box" id="front-box">
+                        <div class="box-content front-box" id="front-box" data-scroll>
                             <h2>Host <span class="title-lg-lightblue-bold">awesome</span> events</h2>
                             <h4>Find awesome talents and event vendors to bring your events to life!</h4>
                             <div id="search">
@@ -571,7 +571,7 @@
 
                             <div class="number" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1">1.
                             </div>
-                            <div class="title-md-white-blackbold mb-10" data-scroll data-scroll-direction="horizontal"
+                            <div class="title-md-white-blackbold" data-scroll data-scroll-direction="horizontal"
                                 data-scroll-speed="-1">Find 'n Compare</div>
                             <p>
                                 Find event vendors or performers <br> in your area. Access their media kit, <br> fees,
@@ -589,7 +589,7 @@
 
                             <div class="number" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1">3.
                             </div>
-                            <div class="title-md-white-blackbold mb-10">Book and Enjoy</div>
+                            <div class="title-md-white-blackbold ">Book and Enjoy</div>
                             <p>
                                 Book your favorite event <br> vendor and enjoy bringing your <br> event to life.
                             </p>
@@ -603,7 +603,7 @@
                             data-scroll-speed="-1">
 
                             <div class="number">2.</div>
-                            <div class="title-md-white-blackbold mb-10">Request a Quote</div>
+                            <div class="title-md-white-blackbold ">Request a Quote</div>
                             <p>
                                 Request a free quote from <br> event vendors and connect with <br> them instantly.
                             </p>
@@ -1034,13 +1034,14 @@
 
 
     </main>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://v2.findbne.com/assets/js/owlcarousel/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-
-    <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
+  
+    
+  
    
     <script>
         $(document).ready(function () {
@@ -1103,73 +1104,7 @@
             });
 
 
-            var statistics = $(".statistic");
-
-            // For each Statistic we find, animate it
-
-     
-
-
-
-
-            $("#shape6").removeClass("animatemeup1");
-            $("#shape6").addClass("animatemedown1");
-
-
-
-            $("#shape12").removeClass("animatemeup1");
-            $("#shape12").addClass("animatemedown1");
-
-
-
-
-            $("#shape11").removeClass("animatemeup2");
-            $("#shape11").addClass("animatemedown2");
-
-            $("#shape10").removeClass("animatemeup1");
-            $("#shape10").addClass("animatemedown1");
-
-
-            $("#shape9").removeClass("animatemeup1");
-            $("#shape9").addClass("animatemedown1");
-
-
-
-
-            $("#shape8").removeClass("animatemeup1");
-            $("#shape8").addClass("animatemedown1");
-
-            $("#shape7").removeClass("animatemeup4");
-            $("#shape7").addClass("animatemedown4");
-
-            $("#shape5").removeClass("animatemeup3");
-            $("#shape5").addClass("animatemedown3");
-
-            $("#shape4").removeClass("animatemeup4");
-            $("#shape4").addClass("animatemedown4");
-
-            $("#shape3").removeClass("animatemeup1");
-            $("#shape3").addClass("animatemedown1");
-
-            $("#shape2").removeClass("animatemeup2");
-            $("#shape2").addClass("animatemedown2");
-
-            $("#shape1").removeClass("animatemeup3");
-            $("#shape1").addClass("animatemedown3");
-
-
-            $("#shape1").css("animation-delay", "0.2s");
-            $("#shape2").css("animation-delay", "0.3s");
-            $("#shape3").css("animation-delay", "0.4s");
-            $("#shape4").css("animation-delay", "0.5s");
-            $("#shape5").css("animation-delay", "0.6s");
-
-            $("#shape6").css("animation-delay", "0.7s");
-            $("#shape7").css("animation-delay", "0.8s");
-            $("#shape8").css("animation-delay", "0.9s");
-            $("#shape9").css("animation-delay", "1s");
-            $("#shape10").css("animation-delay", "1.1s");
-            $("#shape11").css("animation-delay", "1.2s");
+          
 
            
 
@@ -1211,7 +1146,7 @@
 
             gsap.registerPlugin(ScrollTrigger);
            
-
+            //gsap.set("#comp1", {xPercent: -50, yPercent: -50});
 
            const pageContainer = document.querySelector("main");
            pageContainer.setAttribute("data-scroll-container", "");
@@ -1303,24 +1238,129 @@ $(boy1).addClass('animatebody');
 $(boy2).addClass('animatebody');
 $(boy3).addClass('animatebody');
 $(boy4).addClass('animatebody');
-     $(girl1).addClass('animatebody');
+$(girl1).addClass('animatebody');
 ScrollTrigger.create({
+    trigger:".top-section",
    scroller: "[data-scroll-container]",
- start: 0,
- end: 99999,
- onUpdate: ({direction}) => {
+ start:"center 0px",
+ end: "top 0",
+
+ onEnter() {
+    scrollUp.classList.add('aos-animate');
+    console.log("I entered");
+      },
+      
+      onEnterBack() {
+        scrollUp.classList.remove('aos-animate');
+        console.log("I left");
+      }
+ //onUpdate: ({direction}) => {
      
-   if (direction == -1) {
-     scrollUp.classList.remove('aos-animate');
+ //  if (direction == -1) {
+ //    scrollUp.classList.add('aos-animate');
 
 
 
-   } else {
-     scrollUp.classList.add('aos-animate');
+  // } else {
+  //   scrollUp.classList.add('aos-animate');
     
-   }
- }
+  // }
+ //}
 });
+
+
+var shape1 = document.querySelector("#shape1");
+var shape2 = document.querySelector("#shape2");
+var shape3 = document.querySelector("#shape3");
+var shape4 = document.querySelector("#shape4");
+var shape5 = document.querySelector("#shape5");
+var shape6 = document.querySelector("#shape6");
+var shape7 = document.querySelector("#shape7");
+var shape8 = document.querySelector("#shape8");
+var shape9 = document.querySelector("#shape9");
+var shape10 = document.querySelector("#shape10");
+var shape11 = document.querySelector("#shape11");
+var shape12 = document.querySelector("#shape12");
+
+
+
+
+$(document).ready(function () {
+  
+  gsap.registerPlugin(ScrollTrigger);
+          
+        //   gsap.set("#comp1", {xPercent: -50, yPercent: -50});
+ 
+ 
+ 
+//const anim = gsap.to("#shape11", {
+// ease: '.power0',
+// scale: 2,
+// transformOrigin: "50% 50%",
+// rotation: 160,
+// duration: 1
+//});
+ let animstart = gsap.timeline()
+
+ 
+ 
+ 
+ 
+     var anim = gsap.timeline({
+      
+               scrollTrigger: {
+                 trigger: "#comp1",
+                 scroller: "[data-scroll-container]",
+                 scrub: 1.4,
+                 pin: false,
+                 start: "top top",
+                 end: "bottom center"
+                 
+               }
+             });
+
+//ScrollTrigger.create({
+  
+ //trigger: "#comp1",
+ //animation: anim,
+ //start: "top 0px",
+// end: 'top 100px',
+//pin:true,
+ //  scrub: 1,
+  // markers: true,
+  
+ //  onUpdate: self => {
+//console.log("progress:", ///self.progress.toFixed(3), "direction:", //self.direction, "velocity", self.getVelocity());
+//}
+///}); 
+ 
+ 
+anim
+             //outer left top
+             .to("#shape12", {duration: 10, opacity:0, scale: 0.3, rotation: 360, transformOrigin: "center center", ease: "Power2.easeInOut"})
+             //inner left top
+             .to("#shape11", {duration: 10,  opacity:0, scale: 0.35, rotation: -40, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.5")
+             //inner top
+             .to("#shape10", {duration: 10, opacity:0, scale: 0.4, rotation: 50, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12")
+             //inner right top
+             .to("#shape9", {duration: 10, opacity:0, scale: 0.35, rotation: -80, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.75")
+             //outer right top
+             .to("#shape8", {duration: 10, opacity:0, scale: 0.3, rotation: 120, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=10")
+             //outer left bottom
+             .to("#shape7", {duration: 10, opacity:0, y: 200, scale: 0.3, rotation: -190, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=9.5")
+             //inner left bottom
+             .to("#shape6", {duration: 10, opacity:0, scale: 0.35, rotation: 190, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.25")
+             //inner right bottom
+             .to("#shape5", {duration: 10,  opacity:0, scale: 0.35, rotation: -100, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.5")
+             //outer right bottom
+             .to("#shape4", {duration: 10,  opacity:0, scale: 0.3, rotation: 75, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=9")
+             .to("#shape3", {duration: 10, opacity:0,  ease: "ease-out"}, "-=9.2")
+             .to("#shape2", {duration: 15, scale: 0.1, opacity:0,  transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=9.5")
+   .to("#shape1", {duration: 5, scale: 0.1, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=9.6"); 
+ 
+});
+
+
 
            const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
 
