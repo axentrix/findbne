@@ -164,6 +164,7 @@
             <img class="circle circle-3" src="images/star.svg">
 
 
+
             <div id="Container">
                 <!--  <div id="Tiles">
     
@@ -280,7 +281,7 @@
 
 
             </div>
-            <div class="container">
+            <div class="container d-flex justify-content-center pt-40">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-md-6">
                         <div class="box-content front-box" id="front-box" data-scroll>
@@ -557,8 +558,6 @@
 
         </section>
 
-
-
         <section class="three-columns-section" id="about" data-scroll-section data-bgcolor="#0C3587">
             <div id="Container1" data-scroll data-scroll-speed="2"><img src="images/comp2.svg" alt=""></div>
             <div id="Container2"><img src="images/comp22.svg" alt=""></div>
@@ -566,7 +565,8 @@
                 <div class="row homepage-features mt-50 mt-md-0">
                     <div class="col-lg-6 homepage-features-container">
 
-                        <img src="images/img1.png" alt="">
+                        <img src="images/img1.png" alt="" data-scroll data-scroll-direction="horizontal"
+                        data-scroll-speed="-1">
                         <div class="homepage-features-box">
 
                             <div class="number" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1">1.
@@ -584,12 +584,13 @@
 
 
                         <img src="images/img2.png" alt="" data-scroll data-scroll-direction="horizontal"
-                            data-scroll-speed="-1">
+                            data-scroll-speed="1">
                         <div class="homepage-features-box cust-1">
 
                             <div class="number" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1">3.
                             </div>
-                            <div class="title-md-white-blackbold ">Book and Enjoy</div>
+                            <div class="title-md-white-blackbold " data-scroll data-scroll-direction="horizontal"
+                            data-scroll-speed="-1"> Book and Enjoy</div>
                             <p>
                                 Book your favorite event <br> vendor and enjoy bringing your <br> event to life.
                             </p>
@@ -599,11 +600,11 @@
                         class="col-lg-6 offset-lg-4 mt-lg-5 d-flex justify-content-start homepage-features-container  order-2 order-lg-3">
                         <img src="images/img3.png" alt="" data-scroll data-scroll-direction="horizontal"
                             data-scroll-speed="-1">
-                        <div class="homepage-features-box cust-2" data-scroll data-scroll-direction="horizontal"
-                            data-scroll-speed="-1">
+                        <div class="homepage-features-box cust-2" >
 
                             <div class="number">2.</div>
-                            <div class="title-md-white-blackbold ">Request a Quote</div>
+                            <div class="title-md-white-blackbold " data-scroll data-scroll-direction="horizontal"
+                            data-scroll-speed="-1">Request a Quote</div>
                             <p>
                                 Request a free quote from <br> event vendors and connect with <br> them instantly.
                             </p>
@@ -628,29 +629,29 @@
                 <div class="verticalcomp"><img src="images/comp3.svg"><img src="images/comp3.svg"></div>
             </div>
             <div class="container d-flex align-items-center">
-                <div class="row align-items-center">
+                <div class="row w-100 align-items-center">
                     <div class="col-md-6">
                         <div id="slider">
                             <div class="slides">
-                                <img src="images/s1.png" class="img-fluid">
+                                <img src="images/s1.png" width="600" height="900" class="img-fluid">
                             </div>
                             <div class="slides">
-                                <img src="images/s2.png" class="img-fluid">
+                                <img src="images/s2.png" width="600" height="900" class="img-fluid">
                             </div>
                             <div class="slides">
-                                <img src="images/s3.png" class="img-fluid">
+                                <img src="images/s3.png" width="600" height="900" class="img-fluid">
                             </div>
                             <div class="slides">
-                                <img src="images/s4.png" class="img-fluid">
+                                <img src="images/s4.png" width="600" height="900" class="img-fluid">
                             </div>
                             <div class="slides">
-                                <img src="images/s5.png" class="img-fluid">
+                                <img src="images/s5.png" width="600" height="900" class="img-fluid">
                             </div>
                             <div class="slides">
-                                <img src="images/s6.png" class="img-fluid">
+                                <img src="images/s6.png"  width="600" height="900" class="img-fluid">
                             </div>
                             <div class="slides">
-                                <img src="images/s7.png" class="img-fluid">
+                                <img src="images/s7.png"width="600" height="900"  class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -681,6 +682,7 @@
 
 
         <section class="bg-white homepage-slider" data-scroll-section data-bgcolor="#ffffff">
+            
             <div class="text-description-area pt-lg-100 pt-30 pb-30 pb-lg-150">
                 <div class="">
                     <div class="equalize-container-margin ">
@@ -1046,17 +1048,10 @@
     <script>
         $(document).ready(function () {
 
-           
-            $('.owl-carousel').owlCarousel({
-                margin: 10,
-                loop: true,
-                autoWidth: true,
-                items: 4,
-                autoplay: true,
-                autoplayTimeout: 1000,
-                autoplayHoverPause: true
-            })
+         
+        
 
+          
 
             $('a[href*="#"]')
                 // Remove links that don't actually link to anything
@@ -1116,31 +1111,16 @@
             });
 
 
-            function changeSlide() {
+            $("#slider > div:gt(0)").hide();
 
-                if (index < 0) {
-                    index = slides.length - 1;
-                }
-
-                if (index > slides.length - 1) {
-                    index = 0;
-                }
-
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-
-                }
-
-                slides[index].style.display = "block";
-
-
-                index++;
-
-                setTimeout(changeSlide, 2000);
-
-            }
-
-            changeSlide();
+setInterval(function() { 
+  $('#slider > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slider');
+},  3000);
 
 
 
@@ -1148,13 +1128,27 @@
            
             //gsap.set("#comp1", {xPercent: -50, yPercent: -50});
 
+
+$('.owl-carousel').owlCarousel({
+                margin: 10,
+                loop: true,
+                autoWidth: true,
+                items: 4,
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true
+            });
+
+
+
+
            const pageContainer = document.querySelector("main");
            pageContainer.setAttribute("data-scroll-container", "");
 
            const scroller = new LocomotiveScroll({
                el: pageContainer,
                smooth: true,
-               lerp: 0.03, // Linear Interpolation, 0 > 1 // Try 0.01
+               lerp: 0.09, // Linear Interpolation, 0 > 1 // Try 0.01
     multiplier: 1.4, // Effect Multiplier
     reloadOnContextChange: true,
     touchMultiplier: 2,
@@ -1269,27 +1263,15 @@ ScrollTrigger.create({
 });
 
 
-var shape1 = document.querySelector("#shape1");
-var shape2 = document.querySelector("#shape2");
-var shape3 = document.querySelector("#shape3");
-var shape4 = document.querySelector("#shape4");
-var shape5 = document.querySelector("#shape5");
-var shape6 = document.querySelector("#shape6");
-var shape7 = document.querySelector("#shape7");
-var shape8 = document.querySelector("#shape8");
-var shape9 = document.querySelector("#shape9");
-var shape10 = document.querySelector("#shape10");
-var shape11 = document.querySelector("#shape11");
-var shape12 = document.querySelector("#shape12");
 
 
 
 
 $(document).ready(function () {
   
-  gsap.registerPlugin(ScrollTrigger);
+ // gsap.registerPlugin(ScrollTrigger);
           
-        //   gsap.set("#comp1", {xPercent: -50, yPercent: -50});
+     //  gsap.set("#comp1", {xPercent: 50, yPercent: 50});
  
  
  
@@ -1300,10 +1282,9 @@ $(document).ready(function () {
 // rotation: 160,
 // duration: 1
 //});
- let animstart = gsap.timeline()
+ //let animstart = gsap.timeline()
 
- 
- 
+
  
  
      var anim = gsap.timeline({
@@ -1312,7 +1293,7 @@ $(document).ready(function () {
                  trigger: "#comp1",
                  scroller: "[data-scroll-container]",
                  scrub: 1.4,
-                 pin: false,
+                 pin: true,
                  start: "top top",
                  end: "bottom center"
                  
@@ -1333,13 +1314,12 @@ $(document).ready(function () {
 //console.log("progress:", ///self.progress.toFixed(3), "direction:", //self.direction, "velocity", self.getVelocity());
 //}
 ///}); 
- 
- 
+
 anim
              //outer left top
-             .to("#shape12", {duration: 10, opacity:0, scale: 0.3, rotation: 360, transformOrigin: "center center", ease: "Power2.easeInOut"})
+             .to("#shape12", {duration: 10, opacity:0, scale: 0.4, x:"120px", rotation:360, transformOrigin: "center center", ease: "Power2.easeInOut"})
              //inner left top
-             .to("#shape11", {duration: 10,  opacity:0, scale: 0.35, rotation: -40, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.5")
+             .to("#comp1 #shape11", {duration: 10,  opacity:0, scale: 0.6, rotation: 720, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.5")
              //inner top
              .to("#shape10", {duration: 10, opacity:0, scale: 0.4, rotation: 50, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12")
              //inner right top
@@ -1409,8 +1389,7 @@ setTimeout(() => {
 
         //      
 
-        var index = 0;
-        var slides = document.querySelectorAll(".slides");
+        
 
 
 
