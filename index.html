@@ -164,6 +164,7 @@
             <img class="circle circle-3" src="images/star.svg">
 
 
+
             <div id="Container">
                 <!--  <div id="Tiles">
     
@@ -280,7 +281,7 @@
 
 
             </div>
-            <div class="container">
+            <div class="container d-flex justify-content-center pt-40">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-md-6">
                         <div class="box-content front-box" id="front-box" data-scroll>
@@ -557,8 +558,6 @@
 
         </section>
 
-
-
         <section class="three-columns-section" id="about" data-scroll-section data-bgcolor="#0C3587">
             <div id="Container1" data-scroll data-scroll-speed="2"><img src="images/comp2.svg" alt=""></div>
             <div id="Container2"><img src="images/comp22.svg" alt=""></div>
@@ -681,6 +680,7 @@
 
 
         <section class="bg-white homepage-slider" data-scroll-section data-bgcolor="#ffffff">
+            
             <div class="text-description-area pt-lg-100 pt-30 pb-30 pb-lg-150">
                 <div class="">
                     <div class="equalize-container-margin ">
@@ -1046,17 +1046,10 @@
     <script>
         $(document).ready(function () {
 
-           
-            $('.owl-carousel').owlCarousel({
-                margin: 10,
-                loop: true,
-                autoWidth: true,
-                items: 4,
-                autoplay: true,
-                autoplayTimeout: 1000,
-                autoplayHoverPause: true
-            })
+         
+        
 
+          
 
             $('a[href*="#"]')
                 // Remove links that don't actually link to anything
@@ -1114,8 +1107,9 @@
                 $("#navBar").removeClass("show");
                 $('#maintoggler').attr('aria-expanded', false);
             });
-
-
+            var index = 0;
+        var slides = document.querySelectorAll(".slides");
+            
             function changeSlide() {
 
                 if (index < 0) {
@@ -1148,13 +1142,27 @@
            
             //gsap.set("#comp1", {xPercent: -50, yPercent: -50});
 
+
+$('.owl-carousel').owlCarousel({
+                margin: 10,
+                loop: true,
+                autoWidth: true,
+                items: 4,
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true
+            });
+
+
+
+
            const pageContainer = document.querySelector("main");
            pageContainer.setAttribute("data-scroll-container", "");
 
            const scroller = new LocomotiveScroll({
                el: pageContainer,
                smooth: true,
-               lerp: 0.03, // Linear Interpolation, 0 > 1 // Try 0.01
+               lerp: 0.09, // Linear Interpolation, 0 > 1 // Try 0.01
     multiplier: 1.4, // Effect Multiplier
     reloadOnContextChange: true,
     touchMultiplier: 2,
@@ -1269,27 +1277,15 @@ ScrollTrigger.create({
 });
 
 
-var shape1 = document.querySelector("#shape1");
-var shape2 = document.querySelector("#shape2");
-var shape3 = document.querySelector("#shape3");
-var shape4 = document.querySelector("#shape4");
-var shape5 = document.querySelector("#shape5");
-var shape6 = document.querySelector("#shape6");
-var shape7 = document.querySelector("#shape7");
-var shape8 = document.querySelector("#shape8");
-var shape9 = document.querySelector("#shape9");
-var shape10 = document.querySelector("#shape10");
-var shape11 = document.querySelector("#shape11");
-var shape12 = document.querySelector("#shape12");
 
 
 
 
 $(document).ready(function () {
   
-  gsap.registerPlugin(ScrollTrigger);
+ // gsap.registerPlugin(ScrollTrigger);
           
-        //   gsap.set("#comp1", {xPercent: -50, yPercent: -50});
+     //  gsap.set("#comp1", {xPercent: 50, yPercent: 50});
  
  
  
@@ -1300,10 +1296,9 @@ $(document).ready(function () {
 // rotation: 160,
 // duration: 1
 //});
- let animstart = gsap.timeline()
+ //let animstart = gsap.timeline()
 
- 
- 
+
  
  
      var anim = gsap.timeline({
@@ -1312,7 +1307,7 @@ $(document).ready(function () {
                  trigger: "#comp1",
                  scroller: "[data-scroll-container]",
                  scrub: 1.4,
-                 pin: false,
+                 pin: true,
                  start: "top top",
                  end: "bottom center"
                  
@@ -1333,13 +1328,12 @@ $(document).ready(function () {
 //console.log("progress:", ///self.progress.toFixed(3), "direction:", //self.direction, "velocity", self.getVelocity());
 //}
 ///}); 
- 
- 
+
 anim
              //outer left top
-             .to("#shape12", {duration: 10, opacity:0, scale: 0.3, rotation: 360, transformOrigin: "center center", ease: "Power2.easeInOut"})
+             .to("#shape12", {duration: 10, opacity:0, scale: 0.4, x:"120px", rotation:360, transformOrigin: "center center", ease: "Power2.easeInOut"})
              //inner left top
-             .to("#shape11", {duration: 10,  opacity:0, scale: 0.35, rotation: -40, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.5")
+             .to("#comp1 #shape11", {duration: 10,  opacity:0, scale: 0.6, rotation: 720, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.5")
              //inner top
              .to("#shape10", {duration: 10, opacity:0, scale: 0.4, rotation: 50, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12")
              //inner right top
@@ -1409,8 +1403,7 @@ setTimeout(() => {
 
         //      
 
-        var index = 0;
-        var slides = document.querySelectorAll(".slides");
+        
 
 
 
