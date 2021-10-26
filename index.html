@@ -1109,9 +1109,29 @@
                 $("#navBar").removeClass("show");
                 $('#maintoggler').attr('aria-expanded', false);
             });
+<<<<<<< HEAD
 
 
             $("#slider > div:gt(0)").hide();
+=======
+            var index = 0;
+        var slides = document.querySelectorAll(".slides");
+            
+            function changeSlide() {
+
+                if (index < 0) {
+                    index = slides.length - 1;
+                }
+
+                if (index > slides.length - 1) {
+                    index = 0;
+                }
+
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+
+                }
+>>>>>>> c9c75c16c891c7bc2e80a87e0f1647a04e4db0c2
 
 setInterval(function() { 
   $('#slider > div:first')
@@ -1127,6 +1147,20 @@ setInterval(function() {
             gsap.registerPlugin(ScrollTrigger);
            
             //gsap.set("#comp1", {xPercent: -50, yPercent: -50});
+
+
+$('.owl-carousel').owlCarousel({
+                margin: 10,
+                loop: true,
+                autoWidth: true,
+                items: 4,
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true
+            });
+
+
+
 
 
 $('.owl-carousel').owlCarousel({

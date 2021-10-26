@@ -2393,6 +2393,7 @@ svg {
 }
 #slider .slides {
   bottom: 0;
+<<<<<<< HEAD
   position: absolute;
   display: flex;
   justify-content: end;
@@ -2402,6 +2403,19 @@ svg {
   justify-content: flex-end;
 }
 #slider .slides img {
+=======
+  position: relative;
+  overflow: hidden;
+  animation-name: fade;
+  animation-duration: 1s;
+  display: none;
+  transition: all 0.5s;
+}
+#slider .slides img {
+  max-height: 100vh;
+  width: auto;
+  height: 100%;
+>>>>>>> c9c75c16c891c7bc2e80a87e0f1647a04e4db0c2
   bottom: 0;
 }
 @keyframes fade {
@@ -2656,6 +2670,7 @@ svg {
 .title-md-white-blackbold {
   margin-bottom: 15px;
 }
+<<<<<<< HEAD
 footer .bottom-part div {
   color: #8E9FB1 !important;
 }
@@ -2674,6 +2689,8 @@ footer .bottom-part div {
   object-fit: contain;
   object-position: 0 0;
 }
+=======
+>>>>>>> c9c75c16c891c7bc2e80a87e0f1647a04e4db0c2
 @media only screen and (max-width: 576px) {
   .equalize-container-margin {
     height: unset !important;
@@ -2700,10 +2717,16 @@ footer .bottom-part div {
   .homepage-search-2:after {
     display: none;
   }
+<<<<<<< HEAD
   .homepage-features .homepage-features-box {
     position: relative !important;
     padding-bottom: 40px;
     left: 116px !important;
     max-width: unset;
   }
+=======
+}
+footer .bottom-part div {
+  color: #8E9FB1 !important;
+>>>>>>> c9c75c16c891c7bc2e80a87e0f1647a04e4db0c2
 }
