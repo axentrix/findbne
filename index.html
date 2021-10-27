@@ -1109,30 +1109,8 @@
                 $("#navBar").removeClass("show");
                 $('#maintoggler').attr('aria-expanded', false);
             });
-<<<<<<< HEAD
-
-
+        
             $("#slider > div:gt(0)").hide();
-=======
-            var index = 0;
-        var slides = document.querySelectorAll(".slides");
-            
-            function changeSlide() {
-
-                if (index < 0) {
-                    index = slides.length - 1;
-                }
-
-                if (index > slides.length - 1) {
-                    index = 0;
-                }
-
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-
-                }
->>>>>>> c9c75c16c891c7bc2e80a87e0f1647a04e4db0c2
-
 setInterval(function() { 
   $('#slider > div:first')
     .fadeOut(1000)
@@ -1257,16 +1235,7 @@ console.log(scroller);
            var scrollUp = document.querySelector('.header-section');
 
 
-var boy1=document.querySelector('#boy1');
-var boy2=document.querySelector('#boy2');
-var boy3=document.querySelector('#boy3');
-var boy4=document.querySelector('#boy4');
-var girl1=document.querySelector('#girl1');
-$(boy1).addClass('animatebody');
-$(boy2).addClass('animatebody');
-$(boy3).addClass('animatebody');
-$(boy4).addClass('animatebody');
-$(girl1).addClass('animatebody');
+
 ScrollTrigger.create({
     trigger:".top-section",
    scroller: "[data-scroll-container]",
@@ -1327,7 +1296,8 @@ $(document).ready(function () {
                  trigger: "#comp1",
                  scroller: "[data-scroll-container]",
                  scrub: 1.4,
-                 pin: true,
+                 toggleActions: "play none none reset",
+                
                  start: "top top",
                  end: "bottom center"
                  
@@ -1351,28 +1321,60 @@ $(document).ready(function () {
 
 anim
              //outer left top
-             .to("#shape12", {duration: 10, opacity:0, scale: 0.4, x:"120px", rotation:360, transformOrigin: "center center", ease: "Power2.easeInOut"})
+             .to("#shape12", {duration: 2, opacity:0, scale: 0.4, x:"120px", rotation:360, transformOrigin: "center center", ease: "Power2.easeInOut"})
              //inner left top
-             .to("#comp1 #shape11", {duration: 10,  opacity:0, scale: 0.6, rotation: 720, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.5")
+             .to("#comp1 #shape11", {duration: 2,  opacity:0, scale: 0.6, rotation: 720, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.5")
              //inner top
-             .to("#shape10", {duration: 10, opacity:0, scale: 0.4, rotation: 50, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12")
+             .to("#shape10", {duration: 2, opacity:0, scale: 0.4, rotation: 50, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12")
              //inner right top
-             .to("#shape9", {duration: 10, opacity:0, scale: 0.35, rotation: -80, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.75")
+             .to("#shape9", {duration: 2, opacity:0, scale: 0.35, rotation: -80, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.75")
              //outer right top
-             .to("#shape8", {duration: 10, opacity:0, scale: 0.3, rotation: 120, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=10")
+             .to("#shape8", {duration: 2, opacity:0, scale: 0.3, rotation: -290, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=10")
              //outer left bottom
-             .to("#shape7", {duration: 10, opacity:0, y: 200, scale: 0.3, rotation: -190, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=9.5")
+             .to("#shape7", {duration: 2, opacity:0, y: 200, scale: 0.3, rotation: -190, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=9.5")
              //inner left bottom
-             .to("#shape6", {duration: 10, opacity:0, scale: 0.35, rotation: 190, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.25")
+             .to("#shape6", {duration: 2, opacity:0, scale: 0.35, rotation: 190, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.25")
              //inner right bottom
-             .to("#shape5", {duration: 10,  opacity:0, scale: 0.35, rotation: -100, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.5")
+             .to("#shape5", {duration: 2,  opacity:0, scale: 0.35, rotation: -100, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=12.5")
              //outer right bottom
-             .to("#shape4", {duration: 10,  opacity:0, scale: 0.3, rotation: 75, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=9")
-             .to("#shape3", {duration: 10, opacity:0,  ease: "ease-out"}, "-=9.2")
-             .to("#shape2", {duration: 15, scale: 0.1, opacity:0,  transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=9.5")
-   .to("#shape1", {duration: 5, scale: 0.1, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=9.6"); 
+             .to("#shape4", {duration: 2,  opacity:0, scale: 0.3, rotation: 75, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=9")
+             .to("#shape3", {duration: 2, opacity:0,  ease: "ease-out"}, "-=9.2")
+             .to("#shape2", {duration: 2, scale: 0.1, opacity:0,  transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=9.5")
+ 
+  
  
 });
+
+
+
+ScrollTrigger.create({
+    trigger:".top-section",
+   scroller: "[data-scroll-container]",
+ start:"top 0px",
+ end: "top 0",
+
+ 
+});
+
+
+var action = gsap.timeline({defaults: {duration: 1, ease:'power4' },
+  scrollTrigger: {
+    trigger: ".top-section",
+    scrub:1,
+    start: "bottom top",
+    end: "top +=50%", // new
+    onUpdate: self => { 
+      prog = self.progress.toFixed(2);
+      console.log(prog);
+    } // new: info for position
+  }})
+  .to("#shape1", {duration: 2, scale: 0.1, rotation: 120, transformOrigin: "center center", ease: "Power2.easeInOut"}, "-=9.6")
+   .to("#boy1", {duration: 1, scale: 0.1, transformOrigin: "center center", ease: "power4"})
+   .to("#boy2", {duration: 2, scale: 0.1, transformOrigin: "center center", ease: "power4"})
+   .to("#boy3", {duration: 3, scale: 0.1, transformOrigin: "center center", ease: "power4"})
+   .to("#girl1", {duration: 4, scale: 0.1, transformOrigin: "center center", ease: "power4"});
+
+
 
 
 

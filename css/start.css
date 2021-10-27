@@ -2167,11 +2167,21 @@ svg {
 #comp1 {
   position: relative;
 }
-#comp1 g,
-#vendors g {
-  position: absolute;
-  transform-origin: 50% 50%;
-  transition: all 0.5s;
+#comp1 #shape1,
+#vendors #boy1,
+#vendors #boy2,
+#vendors #boy3,
+#vendors #girl1 #comp1 #shape2,
+#comp1 #shape3,
+#comp1 #shape4,
+#comp1 #shape5,
+#comp1 #shape6,
+#comp1 #shape7,
+#comp1 #shape8,
+#comp1 #shape9,
+#comp1 #shape10,
+#comp1 #shape11,
+#comp1 #shape12 {
   /* transform: scale(0.1) translateX(0px) rotate(0deg);*/
 }
 .animatemedown1 {
@@ -2296,13 +2306,6 @@ svg {
   100% {
     transform: scale(0.9) translateY(0);
   }
-}
-#boy1,
-#boy2,
-#boy3,
-#boy4,
-#girl1 {
-  transform: scale(0);
 }
 #vendors .st0 {
   fill: #0F244E;
@@ -2657,6 +2660,15 @@ svg {
   margin-bottom: 15px;
 }
 @media only screen and (max-width: 576px) {
+  .img-fluid {
+    width: 90vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: 0 0;
+  }
+  .slides {
+    justify-content: center;
+  }
   .equalize-container-margin {
     height: unset !important;
   }
@@ -2706,4 +2718,24 @@ footer .bottom-part div {
   height: 100vh;
   object-fit: contain;
   object-position: 0 0;
+}
+@media (max-width: 991px) {
+  #slider {
+    width: 100%;
+    justify-content: center;
+    max-height: 60vh;
+    overflow: hidden;
+  }
+  #slider .slides {
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  #slider .slides .img-fluid {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: 0 0;
+  }
 }
